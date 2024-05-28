@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Syntax en JavaScript</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .example {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        pre[class*="language-"] {
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sugar Syntax en JavaScript</h1>
+
+    <div class="example">
+        <h2>Funciones Flecha (Arrow Functions)</h2>
+        <p>Las funciones flecha son una forma concisa de escribir funciones anónimas.</p>
+        <pre class="language-javascript">
+<code class="language-javascript">
+// Sintaxis tradicional
+var sum = function(a, b) {
+    return a + b;
+};
+
+// Sugar syntax con funciones flecha
+var sum = (a, b) => a + b;
+console.log(sum(2, 3)); // Output: 5
+</code>
+        </pre>
+    </div>
+
+    <div class="example">
+        <h2>Template Literals</h2>
+        <p>Los template literals permiten la interpolación de variables y expresiones dentro de strings.</p>
+        <pre class="language-javascript">
+<code class="language-javascript">
+// Concatenación tradicional
+var name = "John";
+var greeting = "Hello, " + name + "!";
+
+// Sugar syntax con template literals
+var greeting = `Hello, ${name}!`;
+console.log(greeting); // Output: Hello, John!
+</code>
+        </pre>
+    </div>
+
+    <div class="example">
+        <h2>Destructuring</h2>
+        <p>La desestructuración permite extraer valores de arrays o propiedades de objetos en variables distintas.</p>
+        <pre class="language-javascript">
+<code class="language-javascript">
+// Extracción tradicional
+var person = { name: "Alice", age: 25 };
+var name = person.name;
+var age = person.age;
+
+// Sugar syntax con destructuring
+var { name, age } = person;
+console.log(name); // Output: Alice
+console.log(age);  // Output: 25
+</code>
+        </pre>
+    </div>
+
+    <div class="example">
+        <h2>Default Parameters</h2>
+        <p>Los parámetros por defecto permiten establecer valores predeterminados para los parámetros de las funciones.</p>
+        <pre class="language-javascript">
+<code class="language-javascript">
+// Sintaxis tradicional
+function greet(name) {
+    var name = name || 'Guest';
+    console.log('Hello, ' + name);
+}
+
+// Sugar syntax con default parameters
+function greet(name = 'Guest') {
+    console.log(`Hello, ${name}`);
+}
+
+greet();       // Output: Hello, Guest
+greet('Sam');  // Output: Hello, Sam
+</code>
+        </pre>
+    </div>
+
+    <div class="example">
+        <h2>Operador de Propagación (Spread Operator)</h2>
+        <p>El operador de propagación permite expandir elementos de un array u objeto en lugares donde se esperan múltiples elementos.</p>
+        <pre class="language-javascript">
+<code class="language-javascript">
+// Sintaxis tradicional
+var arr1 = [1, 2, 3];
+var arr2 = [4, 5, 6];
+var combined = arr1.concat(arr2);
+
+// Sugar syntax con spread operator
+var combined = [...arr1, ...arr2];
+console.log(combined); // Output: [1, 2, 3, 4, 5, 6]
+</code>
+        </pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+</body>
+</html>
